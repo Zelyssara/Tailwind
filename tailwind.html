@@ -1,16 +1,982 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pansitos Sabrosones</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1 class="text-3xl font-bold underline">
-    Hello world!
-    </h1>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="tailwind1" href="tailwind1.html" />
+    <link rel="tailwind" href="tailwind.html" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <nav
+    class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 z-50"
+  >
+    <div
+      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+    >
+      <a href="tailwind.html" class="flex items-center">
+        <img
+          src="https://w1.pngwing.com/pngs/575/482/png-transparent-cake-croissant-bakery-pan-dulce-bread-concha-baguette-dessert.png"
+          class="h-8 mr-3"
+          alt="Flowbite Logo"
+        />
+        <span
+          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          >Pansitos Sabrosones</span
+        >
+      </a>
+      <button
+        data-collapse-toggle="navbar-multi-level"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-multi-level"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"
+          />
+        </svg>
+      </button>
+
+      <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+        <ul
+          class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+        >
+          <li>
+            <a
+              href="tailwind.html"
+              class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+              aria-current="page"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <button
+              id="dropdownNavbarLink"
+              data-dropdown-toggle="dropdownNavbar"
+              class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent z-50"
+            >
+              Productos
+              <svg
+                class="w-2.5 h-2.5 ml-2.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </button>
+            <!-- Dropdown menu -->
+            <div
+              id="dropdownNavbar"
+              class="hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 z-50"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-400 z-50"
+                aria-labelledby="dropdownLargeButton"
+              >
+                <li>
+                  <a
+                    href="tailwind1.html"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Conchitas</a
+                  >
+                </li>
+                <li aria-labelledby="dropdownNavbarLink">
+                  <button
+                    id="doubleDropdownButton"
+                    data-dropdown-toggle="doubleDropdown"
+                    data-dropdown-placement="right-start"
+                    type="button"
+                    class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    Muffins<svg
+                      class="w-2.5 h-2.5 ml-2.5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    id="doubleDropdown"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                  >
+                    <ul
+                      class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="doubleDropdownButton"
+                    >
+                      <li>
+                        <a
+                          href="tailwind1.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                          >Platano</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="tailwind1.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                          >Chocolate</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="tailwind1.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                          >Vainilla</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="tailwind1.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                          >Zanahoria</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a
+                    href="tailwind1.html"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >Marranitos</a
+                  >
+                </li>
+              </ul>
+              <div class="py-1">
+                <a
+                  href="tailwind1.html"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                  >Otros productos</a
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <a
+              href="tailwind.html"
+              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >Servicios</a
+            >
+          </li>
+          <li>
+            <a
+              href="tailwind1.html"
+              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >Precios</a
+            >
+          </li>
+          <li>
+            <a
+              href="tailwind.html"
+              class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselpanesito" class="relative w-full" data-carousel="slide">
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 overflow-hidden square-lg md:h-96 z-10">
+      <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img
+          src="https://cdn1.matadornetwork.com/blogs/2/2018/10/conchas-mexicanas-shutterstock_409664776.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..."
+        />
+      </div>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img
+          src="https://www.gastrolabweb.com/u/fotografias/m/2021/4/10/f608x342-11500_41223_15.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..."
+        />
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img
+          src="https://assets.elgourmet.com/wp-content/uploads/2023/03/cover_oc412ph9wv_1200_800orejitas.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..."
+        />
+      </div>
+      <!-- Item 4 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img
+          src="https://laroussecocina.mx/wp-content/uploads/2020/05/Piedra.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..."
+        />
+      </div>
+      <!-- Item 5 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img
+          src="https://veggiedesserts.com/wp-content/uploads/2021/06/mango-muffins-2sq.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="..."
+        />
+      </div>
+    </div>
+    <!-- Slider indicators -->
+    <div
+      class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2"
+    >
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="true"
+        aria-label="Slide 1"
+        data-carousel-slide-to="0"
+      ></button>
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 2"
+        data-carousel-slide-to="1"
+      ></button>
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 3"
+        data-carousel-slide-to="2"
+      ></button>
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 4"
+        data-carousel-slide-to="3"
+      ></button>
+      <button
+        type="button"
+        class="w-3 h-3 rounded-full"
+        aria-current="false"
+        aria-label="Slide 5"
+        data-carousel-slide-to="4"
+      ></button>
+    </div>
+    <!-- Slider controls -->
+    <button
+      type="button"
+      class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-prev
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          class="w-4 h-4 text-white dark:text-gray-800"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 1 1 5l4 4"
+          />
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
+    </button>
+    <button
+      type="button"
+      class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-next
+    >
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      >
+        <svg
+          class="w-4 h-4 text-white dark:text-gray-800"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 9 4-4-4-4"
+          />
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
+    </button>
+  </div>
+
+  <div
+    class="w-full bg-white border border-gray-200 square-lg shadow dark:bg-gray-800 dark:border-gray-700"
+  >
+    <div class="sm:hidden">
+      <label for="tabs" class="sr-only">Select tab</label>
+      <select
+        id="tabs"
+        class="bg-gray-50 border-0 border-b border-gray-200 text-gray-900 text-sm rounded-t-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      >
+        <option>Estadisticas</option>
+        <option>Servicios</option>
+        <option>FAQ</option>
+      </select>
+    </div>
+    <ul
+      class="hidden text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg sm:flex dark:divide-gray-600 dark:text-gray-400"
+      id="fullWidthTab"
+      data-tabs-toggle="#fullWidthTabContent"
+      role="tablist"
+    >
+      <li class="w-full">
+        <button
+          id="stats-tab"
+          data-tabs-target="#stats"
+          type="button"
+          role="tab"
+          aria-controls="stats"
+          aria-selected="true"
+          class="inline-block w-full p-4 rounded-tl-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600"
+        >
+          Estadisticas
+        </button>
+      </li>
+      <li class="w-full">
+        <button
+          id="about-tab"
+          data-tabs-target="#about"
+          type="button"
+          role="tab"
+          aria-controls="about"
+          aria-selected="false"
+          class="inline-block w-full p-4 bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600"
+        >
+          Servicios
+        </button>
+      </li>
+      <li class="w-full">
+        <button
+          id="faq-tab"
+          data-tabs-target="#faq"
+          type="button"
+          role="tab"
+          aria-controls="faq"
+          aria-selected="false"
+          class="inline-block w-full p-4 rounded-tr-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600"
+        >
+          FAQ
+        </button>
+      </li>
+    </ul>
+
+    <div
+      id="fullWidthTabContent"
+      class="border-t border-gray-200 dark:border-gray-600"
+    >
+      <div
+        class="hidden p-4 bg-white square-lg md:p-8 dark:bg-gray-800"
+        id="stats"
+        role="tabpanel"
+        aria-labelledby="stats-tab"
+      >
+        <dl
+          class="grid max-w-screen-xl grid-cols-2 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-6 dark:text-white sm:p-8"
+        >
+          <div class="flex flex-col items-center justify-center">
+            <dt class="mb-2 text-3xl font-extrabold">3000+</dt>
+            <dd class="text-gray-500 dark:text-gray-400">Conchitas</dd>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <dt class="mb-2 text-3xl font-extrabold">1500+</dt>
+            <dd class="text-gray-500 dark:text-gray-400">Marranitos</dd>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <dt class="mb-2 text-3xl font-extrabold">1000+</dt>
+            <dd class="text-gray-500 dark:text-gray-400">Orejas</dd>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <dt class="mb-2 text-3xl font-extrabold">800+</dt>
+            <dd class="text-gray-500 dark:text-gray-400">Piedra</dd>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <dt class="mb-2 text-3xl font-extrabold">4000+</dt>
+            <dd class="text-gray-500 dark:text-gray-400">Muffins</dd>
+          </div>
+          <div class="flex flex-col items-center justify-center">
+            <dt class="mb-2 text-3xl font-extrabold">10000+</dt>
+            <dd class="text-gray-500 dark:text-gray-400">Otros pansitos</dd>
+          </div>
+        </dl>
+      </div>
+      <div
+        class="hidden p-4 bg-white square-lg md:p-8 dark:bg-gray-800"
+        id="about"
+        role="tabpanel"
+        aria-labelledby="about-tab"
+      >
+        <h2
+          class="mb-5 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+        >
+          Proveemos el mejor servicio de catering!
+        </h2>
+        <!-- List -->
+        <ul role="list" class="space-y-4 text-gray-500 dark:text-gray-400">
+          <li class="flex space-x-2 items-center">
+            <svg
+              class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+              />
+            </svg>
+            <span class="leading-tight">Panes hechos diariamente</span>
+          </li>
+          <li class="flex space-x-2 items-center">
+            <svg
+              class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+              />
+            </svg>
+            <span class="leading-tight">Diversion para chicos y grandes</span>
+          </li>
+          <li class="flex space-x-2 items-center">
+            <svg
+              class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+              />
+            </svg>
+            <span class="leading-tight"
+              >Trabajamos las 24 horas para ofrecerte el mejor servicio</span
+            >
+          </li>
+          <li class="flex space-x-2 items-center">
+            <svg
+              class="flex-shrink-0 w-3.5 h-3.5 text-blue-600 dark:text-blue-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+              />
+            </svg>
+            <span class="leading-tight"
+              >Escoge tus panes y tu plan de pago</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div
+        class="hidden p-4 bg-white rounded-lg dark:bg-gray-800"
+        id="faq"
+        role="tabpanel"
+        aria-labelledby="faq-tab"
+      >
+        <div
+          id="accordion-flush"
+          data-accordion="collapse"
+          data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+          data-inactive-classes="text-gray-500 dark:text-gray-400"
+        >
+          <h2 id="accordion-flush-heading-1">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-1"
+              aria-expanded="true"
+              aria-controls="accordion-flush-body-1"
+            >
+              <span>Cómo funciona la compra en linea?</span>
+              <svg
+                data-accordion-icon
+                class="w-3 h-3 rotate-180 shrink-0"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5 5 1 1 5"
+                />
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-flush-body-1"
+            class="hidden"
+            aria-labelledby="accordion-flush-heading-1"
+          >
+            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+              <p class="mb-2 text-gray-500 dark:text-gray-400">
+                Una vez que escojas los productos y procedas a pagar, tendrás la
+                opción de recogerlos en la panaderia o tienes la opción de
+                envío, dependiendo del número de panes tendrás envío gratis!
+              </p>
+              <p class="text-gray-500 dark:text-gray-400">
+                Checa nuestra guía para
+                <a
+                  href="https://www.youtube.com/watch?v=GkaI6MlKVGE"
+                  class="text-blue-600 dark:text-blue-500 hover:underline"
+                  >comprar</a
+                >
+                tu pan favorito.
+              </p>
+            </div>
+          </div>
+          <h2 id="accordion-flush-heading-2">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-2"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-2"
+            >
+              <span>Puedo adquirir pan al mayoreo?</span>
+              <svg
+                data-accordion-icon
+                class="w-3 h-3 rotate-180 shrink-0"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5 5 1 1 5"
+                />
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-flush-body-2"
+            class="hidden"
+            aria-labelledby="accordion-flush-heading-2"
+          >
+            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+              <p class="mb-2 text-gray-500 dark:text-gray-400">
+                Tenemos varias opciones para la venta al mayoreo.
+              </p>
+              <p class="text-gray-500 dark:text-gray-400">
+                Checa la opción de
+                <a
+                  href="https://www.youtube.com/watch?v=xi2IKKylk54"
+                  class="text-blue-600 dark:text-blue-500 hover:underline"
+                  >mayoreo,</a
+                >
+                para adquirir el mejor pan al por mayor!
+              </p>
+            </div>
+          </div>
+          <h2 id="accordion-flush-heading-3">
+            <button
+              type="button"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              data-accordion-target="#accordion-flush-body-3"
+              aria-expanded="false"
+              aria-controls="accordion-flush-body-3"
+            >
+              <span>Tienen opción para adquirir franquicia?</span>
+              <svg
+                data-accordion-icon
+                class="w-3 h-3 rotate-180 shrink-0"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5 5 1 1 5"
+                />
+              </svg>
+            </button>
+          </h2>
+          <div
+            id="accordion-flush-body-3"
+            class="hidden"
+            aria-labelledby="accordion-flush-heading-3"
+          >
+            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+              <p class="mb-2 text-gray-500 dark:text-gray-400">
+                Contamos con las mejores opciones para que puedas adquirir una
+                franquicia.
+              </p>
+              <p class="mb-2 text-gray-500 dark:text-gray-400">
+                Somos la mejor opción para pansitos.
+              </p>
+              <p class="mb-2 text-gray-500 dark:text-gray-400">
+                Tenemos dos tipos de franquicias.
+              </p>
+              <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
+                <li>
+                  <a
+                    href="https://www.grupobimbo.com/"
+                    class="text-blue-600 dark:text-blue-500 hover:underline"
+                    >Franquicia Chica</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.onlypanes.com/"
+                    rel="nofollow"
+                    class="text-blue-600 dark:text-blue-500 hover:underline"
+                    >Franquicia Grande</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="imagenes">
+    <div
+      class="max-w-sm bg-white border border-gray-200 square-lg shadow dark:bg-gray-800 dark:border-gray-700"
+    >
+      <a href="#">
+        <img
+          class="rounded-t-lg"
+          src="https://cloudfront-us-east-1.images.arcpublishing.com/dmn/C5LCYY3A6ZDYLG2IXYACLFY2BQ.jpg"
+          alt=""
+        />
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Pan de concha el mejor ALV
+          </h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          Here are the biggest enterprise technology acquisitions of 2021 so
+          far, in reverse chronological order.
+        </p>
+        <a
+          href="#"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Comprar
+          <svg
+            class="w-3.5 h-3.5 ml-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="max-w-sm bg-white border border-gray-200 square-lg shadow dark:bg-gray-800 dark:border-gray-700"
+    >
+      <a href="#">
+        <img
+          class="rounded-t-lg"
+          src="https://images.squarespace-cdn.com/content/v1/6005e21b6f0b7e66aaa7b908/1633611260282-3V4P50JN3QKAUT1BSXOK/Puerquitos_108.jpg"
+          alt=""
+        />
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Marranitos
+          </h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          Oink! Oink! Simplemente un favorito de todos.
+        </p>
+        <a
+          href="#"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Comprar
+          <svg
+            class="w-3.5 h-3.5 ml-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="max-w-sm bg-white border border-gray-200 square-lg shadow dark:bg-gray-800 dark:border-gray-700"
+    >
+      <a href="#">
+        <img
+          class="rounded-t-lg"
+          src="https://i.ytimg.com/vi/Om7BwNGB540/maxresdefault.jpg"
+          alt=""
+        />
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Orejas
+          </h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          Tan dulces y sabrosas.
+        </p>
+        <a
+          href="#"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Comprar
+          <svg
+            class="w-3.5 h-3.5 ml-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="max-w-sm bg-white border border-gray-200 square-lg shadow dark:bg-gray-800 dark:border-gray-700"
+    >
+      <a href="#">
+        <img
+          class="rounded-t-lg"
+          src="https://mxcity.mx/wp-content/uploads/2017/09/piedra.jpg"
+          alt=""
+        />
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Pan Piedra
+          </h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          Suavecito como el amor de mamá.
+        </p>
+        <a
+          href="#"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Comprar
+          <svg
+            class="w-3.5 h-3.5 ml-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="max-w-sm bg-white border border-gray-200 square-lg shadow dark:bg-gray-800 dark:border-gray-700"
+    >
+      <a href="#">
+        <img
+          class="rounded-t-lg"
+          src="https://sugargeekshow.com/wp-content/uploads/2019/10/chocolate-chip-muffins-featured.jpg"
+          alt=""
+        />
+      </a>
+      <div class="p-5">
+        <a href="#">
+          <h5
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Muffins
+          </h5>
+        </a>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          Todo tipo de muffins, recien hechos.
+        </p>
+        <a
+          href="#"
+          class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Comprar
+          <svg
+            class="w-3.5 h-3.5 ml-2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <body>
+    <h1 class="text-3xl font-bold underline"></h1>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </body>
+
+  <footer class="bg-white square-lg shadow dark:bg-gray-900 m-0">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
+          <img
+            src="https://w1.pngwing.com/pngs/575/482/png-transparent-cake-croissant-bakery-pan-dulce-bread-concha-baguette-dessert.png"
+            class="h-8 mr-3"
+            alt="Flowbite Logo"
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >Pansitos Sabrosones</span
+          >
+        </a>
+        <ul
+          class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
+        >
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">Acerca de</a>
+          </li>
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6"
+              >Política de Privacidad</a
+            >
+          </li>
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">Licencia</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline">Contacto</a>
+          </li>
+        </ul>
+      </div>
+      <hr
+        class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+      />
+      <span
+        class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+        >© 2023 <a href="#" class="hover:underline">Pansitos Sabrosones™</a>.
+        Todos los derechos reservados.</span
+      >
+    </div>
+  </footer>
 </html>
